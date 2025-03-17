@@ -6,31 +6,57 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li>PORTFOLIO</li>
-      <li><a href="blogs.html">BLOGS</a></li>
-      <li><a href="essays.html">ESSAYS</a></li>
-      <li><a href="design.html">DESIGN</a></li>
+    <!-- Navigation with ARIA roles -->
+    <ul role="menu">
+      <li role="menuitem"><a href="index.html">HOME</a></li>
+      <li role="menuitem" aria-current="page">PORTFOLIO</li>
+      <li role="menuitem"><a href="blogs.html">BLOGS</a></li>
+      <li role="menuitem"><a href="essays.html">ESSAYS</a></li>
+      <li role="menuitem"><a href="design.html">DESIGN</a></li>
     </ul>
+
+    <!-- Portfolio content -->
     <h2>Portfolio</h2>
+
+    <!-- Profile Section -->
     <h3>Profile</h3>
+    <div class="vcard">
+      <p class="fn">I am Dayna Vos.</p>
+      <p>
+        I like making things. I am based in JHB South Africa. I am currently a
+        3rd year <span class="role">BEngSc Digital Arts Student</span>. I hope
+        to keep creating things by using an engineer as well as an artist's
+        approach.
+      </p>
+    </div>
+
+    <!-- Contact Section -->
+    <h5>Contact Me</h5>
     <p>
-      I am Dayna Vos. I like making things. I am based in JHB South Africa. I am
-      currently a 3rd year BEngSc Digital Arts Student. I hope to keep creating
-      things by using an engineer as well as an artist's approach.
+      <a href="mailto:dayna22vos@gmail.com" class="email"
+        >Email: dayna22vos@gmail.com</a
+      >
     </p>
 
-    <h5>Contact Me</h5>
-    <p><a href="mailto:dayna22vos@gmail.com">Email: dayna22vos@gmail.com</a></p>
-
-    <h3>Portfilio</h3>
-
-    <p>Here are some things I have made.</p>
+    <!-- Portfolio Section -->
+    <h3>Portfolio</h3>
+    <p>Here are some things I have made:</p>
     <ul>
-      <li><a href="https://itch.io/dashboard" target="_blank"> Itch</a></li>
       <li>
-        <a href="https://github.com/dashboard" target="_blank"> GitHub</a>
+        <a
+          href="https://itch.io/dashboard"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Itch</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/dashboard"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
       </li>
     </ul>
   </body>
