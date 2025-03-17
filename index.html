@@ -3,20 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Dayna Vos Portfolio Website</title>
   </head>
   <body>
-    <ul>
-      <li>HOME</li>
-      <li><a href="portfolio.html">PORTFOLIO</a></li>
-      <li><a href="blogs.html">BLOGS</a></li>
-      <li><a href="essays.html">ESSAYS</a></li>
-      <li><a href="design.html">DESIGN</a></li>
+    <!-- Navigation with semantic roles -->
+    <ul role="menu">
+      <li role="menuitem">HOME</li>
+      <li role="menuitem"><a href="portfolio.html">PORTFOLIO</a></li>
+      <li role="menuitem"><a href="blogs.html">BLOGS</a></li>
+      <li role="menuitem"><a href="essays.html">ESSAYS</a></li>
+      <li role="menuitem"><a href="design.html">DESIGN</a></li>
     </ul>
+
+    <!-- Homepage content -->
     <h2>Homepage</h2>
-    <img src="images/annihil8.png" alt="" height="210" width="300" />
-    <video width="320" height="240" src="videos/Boat.mp4" controls></video>
-    <img src="images/19blaine.png" alt="" height="210" width="300" />
+    <img
+      src="images/annihil8.png"
+      alt="Digital artwork labeled 'annihil8'"
+      height="210"
+      width="300"
+    />
+    <video
+      width="320"
+      height="240"
+      src="videos/Boat.mp4"
+      controls
+      aria-label="Boat video"
+    ></video>
+    <img
+      src="images/19blaine.png"
+      alt="Illustration titled '19 Blaine'"
+      height="210"
+      width="300"
+    />
+
+    <!-- Adding hCard microformat -->
+    <div class="vcard">
+      <h3 class="fn">Dayna Vos</h3>
+      <p>
+        <span class="role">Web Developer & Designer</span><br />
+        <span class="email">dayna.vos@example.com</span><br />
+        <span class="tel">+27 11 123 4567</span>
+      </p>
+    </div>
   </body>
 </html>
