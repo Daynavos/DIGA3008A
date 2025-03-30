@@ -1,3 +1,36 @@
 h2 {
-  color: aquamarine;
+  color: magenta;
+}
+
+nav {
+  background: rgba(1, 2, 3, 0.5);
+  backdrop-filter: blur(7px);
+  height: 80px;
+  width: 100%;
+}
+
+.logo {
+  color: blueviolet;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 80px;
+  background-color: aqua;
+  margin: 0 50px;
+  padding: 10px 25px;
+}
+
+nav ul {
+  float: right;
+  margin-right: 40px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  font-size: 25px;
+  color: bisque;
+  text-decoration: none;
 }
