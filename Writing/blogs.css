@@ -1,7 +1,7 @@
 .blogLayout {
   display: grid;
-  grid-template: 100px auto / 15fr 70fr;
   gap: 10px;
+  grid-template: 5fr auto / 20fr 80fr;
   grid-template-areas:
     "title title"
     "sidebar content";
@@ -10,27 +10,65 @@
 .sectionTitle {
   background-color: chocolate;
   grid-area: title;
-  padding-left: 5%;
+
+  border-radius: 10px;
+  margin-top: 10px;
+
+  padding: 1%;
 }
 
 .blogSelection {
-  padding-left: 5%;
-  margin: 0;
-  list-style: none;
-  font: 1.2em sans-serif;
-  background-color: brown;
   grid-area: sidebar;
-}
-
-.blogSelection a {
-  padding: 0.5em 1em;
+  padding: 1%;
+  background-color: brown;
+  border-radius: 10px;
 }
 
 .blogSelection ul {
-  float: left;
-  margin-left: 40px;
+  padding: 1%;
+  background-color: azure;
+  list-style: none;
 }
 
 .content {
   grid-area: content;
+  display: grid;
+  gap: inherit;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "blogOne"
+    "blogTwo"
+    "blogThree"
+    "blogFour";
+  border-radius: 10px;
+  padding: 1%;
+  background-color: black;
+}
+
+.Blog1 {
+  border-radius: 10px;
+  padding: 1%;
+  background-color: rgb(41, 156, 62);
+  grid-area: blogOne;
+}
+
+.Blog2 {
+  border-radius: 10px;
+  padding: 1%;
+  background-color: firebrick;
+  grid-area: blogTwo;
+}
+
+.Blog3 {
+  border-radius: 10px;
+  padding: 1%;
+  background-color: azure;
+  grid-area: blogThree;
+}
+
+.Blog4 {
+  border-radius: 10px;
+  padding: 1%;
+  background-color: bisque;
+  grid-area: blogFour;
 }
