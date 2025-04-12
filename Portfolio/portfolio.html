@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styling.css" />
+    <link rel="stylesheet" href="normalize.css" />
     <title>Portfolio</title>
   </head>
   <body>
-    <!-- Navigation with ARIA roles -->
-    <ul role="menu">
-      <li role="menuitem"><a href="index.html">HOME</a></li>
-      <li role="menuitem" aria-current="page">PORTFOLIO</li>
-      <li role="menuitem"><a href="blogs.html">BLOGS</a></li>
-      <li role="menuitem"><a href="essays.html">ESSAYS</a></li>
-      <li role="menuitem"><a href="design.html">DESIGN</a></li>
-    </ul>
+    <!--NAV BAR-->
+    <nav>
+      <label for="logo" class="logo">Dayna Vos</label>
+      <ul role="menu">
+        <li role="menuitem"><a href="../Home/index.html">HOME</a></li>
+        <li role="menuitem">
+          <a href="../Portfolio/portfolio.html" class="active">PORTFOLIO</a>
+        </li>
+        <li role="menuitem"><a href="../Writing/blogs.html">BLOGS</a></li>
+        <li role="menuitem"><a href="../Design/design.html">DESIGN</a></li>
+      </ul>
+    </nav>
 
     <!-- Portfolio content -->
     <h2>Portfolio</h2>
@@ -59,5 +65,9 @@
         >
       </li>
     </ul>
+
+    <footer>
+      <small> Portfolio of Dayna Vos 2025 </small>
+    </footer>
   </body>
 </html>
