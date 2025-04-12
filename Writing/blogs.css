@@ -1,13 +1,21 @@
 .blogLayout {
   display: grid;
-  grid-template: auto / 15fr 70fr;
+  grid-template: 100px auto / 15fr 70fr;
   gap: 10px;
-  grid-template-areas: "sidebar content";
+  grid-template-areas:
+    "title title"
+    "sidebar content";
+}
+
+.sectionTitle {
+  background-color: chocolate;
+  grid-area: title;
+  padding-left: 5%;
 }
 
 .blogSelection {
+  padding-left: 5%;
   margin: 0;
-  padding: 0;
   list-style: none;
   font: 1.2em sans-serif;
   background-color: brown;
