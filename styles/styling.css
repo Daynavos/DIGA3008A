@@ -11,6 +11,16 @@ nav {
   border-radius: 15px;
 }
 
+.sectionTitle {
+  background-color: chocolate;
+  grid-area: title;
+
+  border-radius: 10px;
+  margin-top: 10px;
+
+  padding: 1%;
+}
+
 body {
   margin: 1%;
 }
