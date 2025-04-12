@@ -34,3 +34,24 @@ nav ul li a {
   color: bisque;
   text-decoration: none;
 }
+
+a.active {
+  background: #835283;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+#logo {
+  width: 50px;
+}
+
+#check {
+  width: 50px;
+}
+
+.burger {
+  color: green;
+  float: right;
+  font-size: 30px;
+}
