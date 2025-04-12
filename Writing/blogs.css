@@ -1,0 +1,28 @@
+.blogLayout {
+  display: grid;
+  grid-template: auto / 15fr 70fr;
+  gap: 10px;
+  grid-template-areas: "sidebar content";
+}
+
+.blogSelection {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 1.2em sans-serif;
+  background-color: brown;
+  grid-area: sidebar;
+}
+
+.blogSelection a {
+  padding: 0.5em 1em;
+}
+
+.blogSelection ul {
+  float: left;
+  margin-left: 40px;
+}
+
+.content {
+  grid-area: content;
+}
