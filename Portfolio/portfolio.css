@@ -6,3 +6,22 @@
     "title"
     "content";
 }
+
+.gameName {
+  font-style: italic;
+}
+
+.content {
+  padding: 1% 3% 1% 3%;
+  border-radius: 10px;
+  grid-area: content;
+  display: grid;
+  gap: inherit;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: antiquewhite;
+}
+
+.gameImage {
+  border-radius: 10px;
+}
