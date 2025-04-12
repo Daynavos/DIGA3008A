@@ -1,7 +1,7 @@
 .blogLayout {
   display: grid;
   gap: 10px;
-  grid-template: 5fr auto / 20fr 80fr;
+  grid-template: 5fr auto / 15fr 85fr;
   grid-template-areas:
     "title title"
     "sidebar content";
@@ -12,11 +12,11 @@
   padding: 1%;
   background-color: brown;
   border-radius: 10px;
+  justify-items: center;
 }
 
 .blogSelection ul {
   padding: 1%;
-  background-color: azure;
   list-style: none;
 }
 

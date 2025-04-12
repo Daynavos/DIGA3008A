@@ -8,7 +8,41 @@ nav {
   height: 80px;
   width: 100%;
 
-  border-radius: 15px;
+  border-radius: 10px;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  float: right;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  font-size: 25px;
+  color: bisque;
+  text-decoration: none;
+}
+
+a.active {
+  background: #835283;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+@media (hover: hover) {
+  /* when hover is supported */
+  nav a:hover {
+    color: white;
+    background: black;
+    border-radius: 50px;
+    padding: 10px 20px;
+  }
 }
 
 .sectionTitle {
@@ -33,30 +67,6 @@ body {
   line-height: 80px;
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  float: right;
-  list-style: none;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
-  font-size: 25px;
-  color: bisque;
-  text-decoration: none;
-}
-
-a.active {
-  background: #835283;
-  color: white;
-  padding: 10px 30px;
-  border-radius: 50px;
-}
-
 #logo {
   width: 50px;
 }
@@ -69,4 +79,11 @@ a.active {
   color: green;
   float: right;
   font-size: 30px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
