@@ -24,7 +24,7 @@
   grid-area: content;
   display: grid;
   gap: inherit;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
     "blogOne"
     "blogTwo"
@@ -32,33 +32,11 @@
     "blogFour";
   border-radius: 10px;
   padding: 1%;
-  background-color: black;
 }
 
-.Blog1 {
+.blogEntry {
+  padding: 1% 2%;
+  border: solid 1px;
+  border-color: gray;
   border-radius: 10px;
-  padding: 1%;
-  background-color: rgb(41, 156, 62);
-  grid-area: blogOne;
-}
-
-.Blog2 {
-  border-radius: 10px;
-  padding: 1%;
-  background-color: firebrick;
-  grid-area: blogTwo;
-}
-
-.Blog3 {
-  border-radius: 10px;
-  padding: 1%;
-  background-color: azure;
-  grid-area: blogThree;
-}
-
-.Blog4 {
-  border-radius: 10px;
-  padding: 1%;
-  background-color: bisque;
-  grid-area: blogFour;
 }
