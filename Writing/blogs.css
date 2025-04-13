@@ -40,3 +40,8 @@
   border-color: gray;
   border-radius: 10px;
 }
+
+details summary {
+  list-style: none;
+  cursor: pointer;
+}
