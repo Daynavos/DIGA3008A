@@ -1,3 +1,14 @@
+html {
+  font-family: "Satoshi", sans-serif;
+  scroll-behavior: smooth;
+  background-color: white;
+}
+
+h1 {
+  font-family: "Mauline", sans-serif;
+  font-size: xx-large;
+}
+
 nav {
   background: rgba(1, 2, 3, 0.5);
   backdrop-filter: blur(7px);
@@ -46,11 +57,9 @@ a.active {
 }
 
 .sectionTitle {
-  background-color: chocolate;
-  grid-area: title;
-
   border-radius: 10px;
   margin-top: 10px;
+  margin-bottom: 10px;
 
   padding: 1%;
 }

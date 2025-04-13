@@ -1,18 +1,13 @@
-.blogLayout {
-  display: grid;
-  gap: 10px;
-  grid-template: 5fr auto / 15fr 85fr;
-  grid-template-areas:
-    "title title"
-    "sidebar content";
-}
-
 .blogSelection {
-  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
   padding: 1%;
   background-color: brown;
+  float: left;
+  width: 15%;
   border-radius: 10px;
   justify-items: center;
+  margin-top: 1%;
 }
 
 .blogSelection ul {
@@ -21,20 +16,22 @@
 }
 
 .content {
-  grid-area: content;
   display: grid;
-  gap: inherit;
+  gap: 10px;
   grid-template-rows: auto auto auto auto;
-  grid-template-areas:
-    "blogOne"
-    "blogTwo"
-    "blogThree"
-    "blogFour";
   border-radius: 10px;
   padding: 1%;
 }
 
 .blogEntry {
+  filter: contrast(200%) brightness(100%);
+  background: radial-gradient(
+      circle at 150% 50%,
+      rgba(56, 56, 107, 1),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+
   padding: 1% 2%;
   border: solid 1px;
   border-color: gray;
