@@ -1,0 +1,11 @@
+.HomeTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 2%;
+  border: solid 1px;
+  border-color: gray;
+  border-radius: 10px;
+  margin-top: 1%;
+}

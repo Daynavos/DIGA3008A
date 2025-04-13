@@ -43,6 +43,10 @@ a.active {
     border-radius: 50px;
     padding: 10px 20px;
   }
+
+  a:hover {
+    color: #835283;
+  }
 }
 
 .sectionTitle {
@@ -85,5 +89,5 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
