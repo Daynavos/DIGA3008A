@@ -1,7 +1,10 @@
 details summary {
   list-style: none;
   cursor: pointer;
-  width: auto;
+  min-height: 200px;
+  height: auto;
+  display: block;
+  position: relative;
 }
 
 .iteration img {

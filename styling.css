@@ -141,6 +141,10 @@ footer {
   header p {
     font-size: 2.1em;
   }
+
+  footer {
+    font-size: 0.7rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -166,5 +170,9 @@ footer {
 
   header p {
     font-size: 1.5em;
+  }
+
+  footer {
+    font-size: 0.6rem;
   }
 }
