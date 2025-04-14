@@ -3,13 +3,13 @@
   --pink-dark: #c6939a;
   --tape-gray: #dbd8be;
   --tape-edge-gray: #b7b49d;
-  --transparent: rgba(255, 255, 255, 0);
+  --transparent: rgba(56, 56, 107, 0);
 }
 
 .HomeTitle {
   width: auto;
   height: auto;
-
+  padding-left: 2%;
   background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 );
 
@@ -22,12 +22,11 @@
   border-top: 1px solid #f4f4f6;
 
   box-shadow: 0 0 2px 0 #f4f4f6 inset,
-    0em 100px 500px -5px rgba(255, 255, 255, 0.5),
-    -1em 1em 3em 1em rgba(255, 255, 255, 0.2),
-    -5em 1em 30em 1em rgba(255, 255, 255, 0.2),
-    0em 2px 0 rgba(255, 255, 255, 0.7),
-    0em 10px 50px -10px rgba(255, 255, 255, 1), 1.2em -0.8em 2em 0em #044134,
-    5.5em -1em 50em 0em #044134, 0px -5px 25px 0px #808f8c;
+    0em 100px 500px -5px rgba(56, 56, 107, 0.5),
+    -1em 1em 3em 1em rgba(56, 56, 107, 0.2),
+    -5em 1em 30em 1em rgba(56, 56, 107, 0.2), 0em 2px 0 rgba(56, 56, 107, 0.7),
+    0em 10px 50px -10px rgba(255, 255, 255, 1), 1.2em -0.8em 2em 0em #041441,
+    5.5em -1em 50em 0em #041c41, 0px -5px 25px 0px #80888f;
 
   backface-visibility: hidden;
 
@@ -36,7 +35,7 @@
   background-size: 00%;
 }
 
-h1 {
+.mainTitle {
   font-size: 150px;
   background-image: radial-gradient(
       circle at 150% 50%,
@@ -46,6 +45,11 @@ h1 {
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   color: transparent;
+  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 25px;
 }
 
 .games {
@@ -56,6 +60,7 @@ h1 {
 }
 
 .gameEntry {
+  background: whitesmoke;
   display: grid;
   border: solid 1px;
   border-color: gray;
@@ -91,7 +96,8 @@ h1 {
   position: relative;
   margin: 20px;
   width: 1fr;
-  background: url(https://grainy-gradients.vercel.app/noise.svg), #a2cdc8;
+  background: url(https://grainy-gradients.vercel.app/noise.svg),
+    rgb(92, 92, 140);
 
   border-radius: 2px;
   display: grid;
@@ -106,7 +112,7 @@ h1 {
   bottom: 10px;
   width: 40%;
   height: 10px;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 7.5px 16px rgba(0, 0, 0, 0.7);
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }

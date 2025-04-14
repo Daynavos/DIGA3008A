@@ -7,6 +7,15 @@ html {
 h1 {
   font-family: "Mauline", sans-serif;
   font-size: xx-large;
+  font-size: 100px;
+  background-image: radial-gradient(
+      circle at 150% 50%,
+      rgba(56, 56, 107, 1),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  color: transparent;
 }
 
 nav {
@@ -31,10 +40,11 @@ nav ul li a {
   font-size: 25px;
   color: black;
   text-decoration: none;
+  font-weight: bold;
 }
 
 a.active {
-  background: rgb(92, 149, 133);
+  background: rgb(112, 112, 154);
   color: white;
   padding: 10px 20px;
 
@@ -69,7 +79,7 @@ body {
 
 .logo {
   padding-left: 1%;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   line-height: 80px;
 }
@@ -80,12 +90,6 @@ body {
 
 #check {
   width: 50px;
-}
-
-.burger {
-  color: green;
-  float: right;
-  font-size: 30px;
 }
 
 footer {
