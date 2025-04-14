@@ -17,10 +17,6 @@
   align-self: center;
 }
 
-.gameName {
-  font-style: italic;
-}
-
 .gameImage {
   display: flex;
   border-radius: 10px;

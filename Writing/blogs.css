@@ -30,20 +30,58 @@
 
 .blogEntry {
   filter: contrast(200%) brightness(100%);
-  background: radial-gradient(
-      circle at 150% 50%,
-      rgba(56, 56, 107, 1),
-      rgba(129, 25, 25, 0)
-    ),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-
   padding: 1% 2%;
-  border: solid 1px;
-  border-color: gray;
   border-radius: 10px;
 }
 
 details summary {
   list-style: none;
   cursor: pointer;
+  width: auto;
+  min-width: 250px;
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  background: linear-gradient(
+      to right,
+      rgba(56, 56, 107, 0.5) 35%,
+      rgba(75, 25, 129, 0) 100%
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  padding: 1%;
+  color: darkslategray;
+  box-shadow: 1px 2px 1px -1px #777;
+  transition: all 200ms ease-in-out;
+}
+
+details summary.shadow {
+  position: relative;
+}
+
+details summary.shadow::before {
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 13px;
+  right: 7px;
+  width: 25%;
+  top: 0;
+  box-shadow: 0 15px 10px #777;
+  transform: rotate(4deg);
+  transition: all 150ms ease-in-out;
+}
+
+details summary:hover {
+  background: linear-gradient(
+      to right,
+      rgba(56, 56, 107, 0.5) 0%,
+      rgba(56, 56, 107, 0.5) 100%
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+}
+
+details summary.shadow:hover::before {
+  transform: rotate(0deg);
+  bottom: 20px;
+  z-index: -10;
 }

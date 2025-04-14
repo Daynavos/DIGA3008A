@@ -6,10 +6,22 @@ html {
 
 h1 {
   font-family: "Mauline", sans-serif;
-  font-size: xx-large;
   font-size: 100px;
   background-image: radial-gradient(
-      circle at 150% 50%,
+      circle at 45% 50%,
+      rgba(56, 56, 107, 1),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  color: transparent;
+}
+
+h2 {
+  font-family: "Mauline", sans-serif;
+  font-size: 60px;
+  background-image: radial-gradient(
+      circle at 40% 50%,
       rgba(56, 56, 107, 1),
       rgba(129, 25, 25, 0)
     ),
@@ -50,7 +62,7 @@ a {
 
 a.active {
   background: url(https://grainy-gradients.vercel.app/noise.svg),
-    rgb(92, 92, 140);
+    rgba(56, 56, 107, 1);
   color: white;
   padding: 10px 20px;
 
