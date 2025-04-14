@@ -7,3 +7,10 @@ details summary {
 .iteration img {
   max-width: 600px;
 }
+
+.iteration {
+  border-radius: 10px;
+  border: solid, 2px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
