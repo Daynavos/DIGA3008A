@@ -1,3 +1,16 @@
+h2 {
+  font-family: "Mauline", sans-serif;
+  font-size: 3rem;
+  background-image: radial-gradient(
+      circle at 35% 50%,
+      rgb(49, 49, 94),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-clip: text;
+  color: transparent;
+}
+
 .blogSelection {
   display: flex;
   flex-direction: column;

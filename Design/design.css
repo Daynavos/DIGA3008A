@@ -1,0 +1,9 @@
+details summary {
+  list-style: none;
+  cursor: pointer;
+  width: auto;
+}
+
+.iteration img {
+  max-width: 600px;
+}

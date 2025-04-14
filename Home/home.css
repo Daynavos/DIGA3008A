@@ -26,8 +26,8 @@
   border-top: 1px solid #f4f4f6;
 
   box-shadow: 0 0 2px 0 #f4f4f6 inset, -1em 1em 3em 1em rgba(56, 56, 107, 0.2),
-    -5em 1em 30em 1em rgba(56, 56, 107, 0.2), 0em 2px 0 rgba(56, 56, 107, 0.7),
-    1.2em -0.8em 2em 0em #3e467a, 5.5em -1em 50em 0em #3c3d69,
+    -5em 1em 30em 1em rgba(85, 85, 105, 0.2), 0em 2px 0 rgba(92, 92, 101, 0.7),
+    1.2em -0.8em 2em 0em #3e467a, 5.5em -1em 50em 0em #5f5f6e,
     0px -5px 25px 0px #80888f;
 
   backface-visibility: hidden;
@@ -50,14 +50,14 @@
 .mainTitle {
   font-size: 9rem;
   background-image: radial-gradient(
-      circle at 110% 50%,
+      circle at 90% 50%,
       rgba(56, 56, 107, 1),
       rgba(129, 25, 25, 0)
     ),
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   color: transparent;
-  text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 5px 10px rgba(32, 31, 31, 0.2);
 }
 
 p {
