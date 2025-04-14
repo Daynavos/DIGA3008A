@@ -69,6 +69,15 @@ details summary {
   transition: all 200ms ease-in-out;
 }
 
+.e-content {
+  margin-inline: 2rem;
+  font-size: 1.2rem;
+}
+
+.p-summary {
+  font-size: 1.3rem;
+}
+
 details summary.shadow {
   position: relative;
 }
@@ -125,6 +134,15 @@ details summary.shadow:hover::before {
   .p-name {
     font-size: 2.2rem;
   }
+
+  .e-content {
+    margin-inline: 1rem;
+    font-size: 1rem;
+  }
+
+  .p-summary {
+    font-size: 1.1rem;
+  }
 }
 
 @media (max-width: 450px) {
@@ -150,5 +168,14 @@ details summary.shadow:hover::before {
 
   .p-name {
     font-size: 1.9rem;
+  }
+
+  .e-content {
+    margin-inline: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .p-summary {
+    font-size: 1rem;
   }
 }
