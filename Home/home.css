@@ -117,7 +117,7 @@ p {
   border-radius: 2px;
   display: grid;
   padding: 4%;
-  justify-items: center;
+  justify-content: center;
 }
 
 .blogEntry::before,
@@ -153,4 +153,24 @@ p {
 
 .blogEntry:hover::after {
   right: 5px;
+}
+
+@media (max-width: 700px) {
+  .mainTitle {
+    font-size: 8rem;
+  }
+
+  .tagline {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .mainTitle {
+    font-size: 6rem;
+  }
+
+  .tagline {
+    font-size: 1.9rem;
+  }
 }
