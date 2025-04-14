@@ -18,9 +18,9 @@
 }
 
 .gameImage {
-  display: flex;
+  min-height: 100px;
+  height: auto;
+  max-width: 100%;
   border-radius: 10px;
-  margin-left: 1%;
-  margin-right: 1%;
-  max-height: 700px;
+  flex-shrink: 0;
 }
