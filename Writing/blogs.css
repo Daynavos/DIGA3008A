@@ -110,6 +110,10 @@ details summary.shadow:hover::before {
   z-index: -10;
 }
 
+img {
+  max-width: 500px;
+}
+
 @media (max-width: 800px) {
   .blogSelection {
     display: flex;
@@ -142,6 +146,10 @@ details summary.shadow:hover::before {
 
   .p-summary {
     font-size: 1.1rem;
+  }
+
+  img {
+    max-width: 300;
   }
 }
 
@@ -177,5 +185,9 @@ details summary.shadow:hover::before {
 
   .p-summary {
     font-size: 1rem;
+  }
+
+  img {
+    max-width: 180px;
   }
 }
