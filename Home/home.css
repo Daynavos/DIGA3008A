@@ -1,11 +1,19 @@
+:root {
+  --pink: #ecb2ba;
+  --pink-dark: #c6939a;
+  --tape-gray: #dbd8be;
+  --tape-edge-gray: #b7b49d;
+  --transparent: rgba(255, 255, 255, 0);
+}
+
 .HomeTitle {
-  width: 35em;
-  height: 50em;
+  width: auto;
+  height: auto;
 
-  background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 );
 
-  margin: auto;
+  margin: 4%;
 
   border-radius: 2px;
   border-left: 2px solid #f5f5f7;
@@ -22,6 +30,10 @@
     5.5em -1em 50em 0em #044134, 0px -5px 25px 0px #808f8c;
 
   backface-visibility: hidden;
+
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/23618/rip.svg)
+    bottom;
+  background-size: 00%;
 }
 
 h1 {
@@ -64,11 +76,60 @@ h1 {
   margin-top: 1%;
 }
 
+.top-tape {
+  position: absolute;
+  height: 10%;
+  top: -5px;
+  width: 115%;
+  background-color: var(--tape-gray);
+  border-right: 1px dotted var(--tape-edge-gray);
+  border-left: 1px dotted var(--tape-edge-gray);
+  opacity: 0.5;
+}
+
 .blogEntry {
+  position: relative;
+  margin: 20px;
+  width: 1fr;
+  background: url(https://grainy-gradients.vercel.app/noise.svg), #a2cdc8;
+
+  border-radius: 2px;
   display: grid;
-  border: solid 1px;
-  border-color: gray;
-  border-radius: 10px;
   padding: 4%;
   justify-items: center;
+}
+
+.blogEntry::before,
+.blogEntry::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  width: 40%;
+  height: 10px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.blogEntry::before {
+  left: 15px;
+  transform: skew(-5deg) rotate(-5deg);
+}
+
+.blogEntry::after {
+  right: 15px;
+  transform: skew(5deg) rotate(5deg);
+}
+
+.blogEntry:hover::before,
+.blogEntry:hover::after {
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.blogEntry:hover::before {
+  left: 5px;
+}
+
+.blogEntry:hover::after {
+  right: 5px;
 }
