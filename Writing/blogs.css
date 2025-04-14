@@ -43,12 +43,12 @@ h2 {
 }
 
 .blogEntry {
-  filter: contrast(200%) brightness(100%);
   padding: 1% 2%;
   border-radius: 10px;
 }
 
 details summary {
+  filter: contrast(200%) brightness(100%);
   list-style: none;
   cursor: pointer;
   width: auto;

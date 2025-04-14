@@ -5,7 +5,7 @@ details summary {
 }
 
 .iteration img {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .iteration {
@@ -13,4 +13,16 @@ details summary {
   border: solid, 2px;
   margin-bottom: 1rem;
   padding: 1rem;
+}
+
+@media (max-width: 700px) {
+  img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 450px) {
+  img {
+    max-width: 180px;
+  }
 }
