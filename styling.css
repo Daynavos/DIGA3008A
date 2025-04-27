@@ -53,7 +53,7 @@ nav {
   justify-content: space-between;
 }
 
-nav ul {
+.navMenu {
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -61,7 +61,7 @@ nav ul {
   margin-bottom: 2rem;
 }
 
-nav ul li a {
+.navMenu li a {
   font-size: 1.2rem;
   color: black;
   text-decoration: none;
@@ -130,14 +130,6 @@ footer {
 }
 
 @media (max-width: 700px) {
-  nav ul {
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  nav ul li a {
-    font-size: 1rem;
-  }
-
   .logo {
     font-size: 1.2rem;
   }
@@ -174,14 +166,6 @@ footer {
 }
 
 @media (max-width: 450px) {
-  nav ul {
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  nav ul li a {
-    font-size: 0.8rem;
-  }
-
   .logo {
     display: none;
   }
@@ -210,10 +194,16 @@ footer {
     position: fixed;
     left: -100%;
     top: 70px;
-    gap: 0;
-    flex-direction: column;
     width: 100%;
-    text-align: center;
+    height: 100vh;
+    background: lightgrey;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: left 0.3s ease;
   }
 
   .navMenu.active {
