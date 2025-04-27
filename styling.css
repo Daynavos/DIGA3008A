@@ -68,6 +68,18 @@ nav ul li a {
   font-weight: bold;
 }
 
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 8px;
+  margin: 5px auto;
+  background-color: black;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -145,6 +157,20 @@ footer {
   footer {
     font-size: 0.7rem;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 450px) {
@@ -174,5 +200,23 @@ footer {
 
   footer {
     font-size: 0.6rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navMenu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navMenu.active {
+    left: 0;
   }
 }
