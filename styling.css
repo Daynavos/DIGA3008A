@@ -75,9 +75,10 @@ nav {
 .bar {
   display: block;
   width: 30px;
-  height: 8px;
-  margin: 5px auto;
+  height: 5px;
+  margin: 8px auto;
   background-color: black;
+  border-radius: 10px;
 }
 
 a {
@@ -156,12 +157,21 @@ footer {
 
   .navMenu {
     position: fixed;
-    left: -100%;
-    top: 70px;
+    top: -500%;
+
     gap: 0;
     flex-direction: column;
+    background-color: aliceblue;
     width: 100%;
     text-align: center;
+    transition: 0.1s;
+  }
+
+  .navMenu li {
+    margin: 10px;
+  }
+  .navMenu.active {
+    top: 30px;
   }
 }
 
