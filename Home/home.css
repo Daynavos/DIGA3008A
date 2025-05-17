@@ -6,10 +6,6 @@
   --transparent: rgba(56, 56, 107, 0);
 }
 
-.homeNav {
-  border: none;
-}
-
 .HomeTitle {
   display: flex;
   flex-direction: column;
@@ -25,12 +21,12 @@
   border-right: 1px solid #adc0bc;
   border-top: 1px solid #f4f4f6;
 
-  box-shadow: 0 0 2px 0 #f4f4f6 inset, -1em 1em 3em 1em rgba(56, 56, 107, 0.2),
+  /* box-shadow: 0 0 2px 0 #f4f4f6 inset, -1em 1em 3em 1em rgba(56, 56, 107, 0.2),
     -5em 1em 30em 1em rgba(85, 85, 105, 0.2), 0em 2px 0 rgba(92, 92, 101, 0.7),
     1.2em -0.8em 2em 0em #3e467a, 5.5em -1em 50em 0em #5f5f6e,
     0px -5px 25px 0px #80888f;
 
-  backface-visibility: hidden;
+  backface-visibility: hidden;*/
 }
 
 .tagline {
@@ -100,7 +96,8 @@ p {
   position: absolute;
   height: 10%;
   top: -5px;
-  width: 111%;
+  left: -3%;
+  width: 106%;
   background-color: var(--tape-gray);
   border-right: 1px dotted var(--tape-edge-gray);
   border-left: 1px dotted var(--tape-edge-gray);
@@ -117,7 +114,6 @@ p {
   border-radius: 2px;
   display: grid;
   padding: 4%;
-  justify-content: center;
 }
 
 .blogEntry::before,
