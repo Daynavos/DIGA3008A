@@ -22,6 +22,9 @@ h2 {
   border-color: rgba(56, 56, 107, 1);
   align-items: center;
   margin-top: 1%;
+  position: sticky;
+  top: 1rem;
+  height: fit-content;
 }
 
 .blogSelection ul {
