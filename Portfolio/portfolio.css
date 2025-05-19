@@ -8,6 +8,10 @@
   border-radius: 10px;
 }
 
+.gameEntry:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
 .gameEntry a {
   font-size: 1.2rem;
   font-weight: bold;
