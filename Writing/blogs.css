@@ -16,13 +16,14 @@ h2 {
   flex-direction: column;
   padding: 1%;
   float: left;
-  width: 15%;
+  width: 20%;
   border-radius: 10px;
   border: solid;
   border-color: rgba(56, 56, 107, 1);
   margin-top: 1%;
   position: sticky;
   top: 1rem;
+  margin-left: 8rem;
 }
 
 .blogSelection ul {
@@ -31,8 +32,12 @@ h2 {
 }
 
 .blogSelection ul li {
-  margin: 1.2rem;
+  margin: 0.2rem 0;
   font-weight: bold;
+}
+
+.blogSelection ul li a {
+  display: block;
 }
 
 .content {
@@ -40,8 +45,11 @@ h2 {
   gap: 1rem;
   grid-template-rows: auto;
   border-radius: 10px;
+}
 
-  padding-inline: 8rem;
+main {
+  margin-top: 0.5%;
+  padding-left: 1.2rem;
 }
 
 .blogEntry {
@@ -66,9 +74,10 @@ details summary {
     ),
     url(https://grainy-gradients.vercel.app/noise.svg);
   padding: 1%;
+  padding-left: 2rem;
   color: darkslategray;
   box-shadow: 1px 2px 4px -1px #413f3f;
-  transition: all 200ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 .e-content {
@@ -82,6 +91,7 @@ details summary {
 
 details summary.shadow {
   position: relative;
+  transition: 2000ms ease-in-out;
 }
 
 details summary.shadow::before {
@@ -94,7 +104,7 @@ details summary.shadow::before {
   top: 0;
   box-shadow: 0 15px 10px #3a3a3a;
   transform: rotate(4deg);
-  transition: all 200ms ease-in-out;
+  transition: all 1000ms ease-in-out;
 }
 
 details summary:hover {

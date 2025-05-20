@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Scroll-to-hide nav logic
-  const nav = document.querySelector("nav"); // now targeting generic <nav>
+  const nav = document.querySelector("nav");
   let lastScrollY = window.scrollY;
 
   if (nav) {
@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Scroll-to-top logic
   const btn = document.getElementById("top");
 
   window.addEventListener("scroll", () => {
