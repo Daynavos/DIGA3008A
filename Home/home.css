@@ -9,17 +9,16 @@
 .HomeTitle {
   display: flex;
   flex-direction: column;
-
+  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 ); */
   padding-left: 2%;
-  background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 );
+  /* background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%); */
 
-  margin-inline: 4%;
+  /* margin-inline: 4%;
 
   border-left: 2px solid #f5f5f7;
   border-bottom: 2px solid #f5f5f7;
   border-right: 1px solid #adc0bc;
-  border-top: 1px solid #f4f4f6;
+  border-top: 1px solid #f4f4f6; */
 
   /* box-shadow: 0 0 2px 0 #f4f4f6 inset, -1em 1em 3em 1em rgba(56, 56, 107, 0.2),
     -5em 1em 30em 1em rgba(85, 85, 105, 0.2), 0em 2px 0 rgba(92, 92, 101, 0.7),
@@ -46,7 +45,7 @@
 .mainTitle {
   font-size: 9rem;
   background-image: radial-gradient(
-      circle at 90% 50%,
+      circle at var(--x, 90%) var(--y, 50%),
       rgba(56, 56, 107, 1),
       rgba(129, 25, 25, 0)
     ),
@@ -54,6 +53,7 @@
   background-clip: text;
   color: transparent;
   text-shadow: 2px 5px 10px rgba(32, 31, 31, 0.2);
+  transition: --x 0.3s ease, --y 0.3s ease;
 }
 
 p {
@@ -140,7 +140,7 @@ p {
 
 .blogEntry:hover::before,
 .blogEntry:hover::after {
-  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 17px rgba(0, 0, 0, 0.4);
 }
 
 .blogEntry:hover::before {
