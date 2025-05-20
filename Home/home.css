@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 ); */
-  padding-left: 2%;
+  padding-inline: 8rem;
   /* background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%); */
 
   /* margin-inline: 4%;
@@ -31,7 +31,7 @@
 .tagline {
   font-family: "Mauline", sans-serif;
   font-size: 3rem;
-  padding-left: 3%;
+  padding-left: 1%;
   background-image: radial-gradient(
       circle at 70% 50%,
       rgba(56, 56, 107, 1),
@@ -40,6 +40,11 @@
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   color: transparent;
+}
+
+.HomeTitle {
+  padding-inline: 8rem;
+  margin: 0px;
 }
 
 .mainTitle {
@@ -54,6 +59,8 @@
   color: transparent;
   text-shadow: 2px 5px 10px rgba(32, 31, 31, 0.2);
   transition: --x 0.3s ease, --y 0.3s ease;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -66,7 +73,7 @@ p {
 
 .games {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1rem;
 }
 
@@ -77,7 +84,7 @@ p {
 }
 
 .gameImage {
-  max-width: 280px;
+  max-width: 270px;
   border-radius: 10px;
   display: flex;
   justify-self: center;
@@ -159,11 +166,16 @@ p {
   .tagline {
     font-size: 2.3rem;
   }
+
+  .HomeTitle {
+    padding-inline: 2.5rem;
+    margin: 0px;
+  }
 }
 
 @media (max-width: 450px) {
   .mainTitle {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .tagline {
