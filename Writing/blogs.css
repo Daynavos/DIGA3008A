@@ -24,6 +24,22 @@ h2 {
   position: sticky;
   top: 1rem;
   margin-left: 8rem;
+  transition: top 0.3s ease;
+  max-height: calc(100vh - 7.8rem);
+  overflow-y: auto;
+}
+
+.blogSelection.nav-visible {
+  top: 5rem; /* Pushes it lower when the nav is visible and overlapping */
+}
+
+.blogSelection::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.blogSelection::-webkit-scrollbar-thumb {
+  background-color: rgba(56, 56, 107, 0.6);
+  border-radius: 10px;
 }
 
 .blogSelection ul {

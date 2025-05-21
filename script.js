@@ -9,20 +9,47 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Scroll-to-hide nav logic
   const nav = document.querySelector("nav");
+  const blogSidebar = document.querySelector(".blogSelection");
   let lastScrollY = window.scrollY;
+  let scrollUpBuffer = 0;
+  const threshold = 10;
 
-  if (nav) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY < lastScrollY) {
-        nav.classList.remove("nav-hidden");
-      } else {
-        nav.classList.add("nav-hidden");
-      }
-      lastScrollY = window.scrollY;
-    });
+  function checkOverlapAndAdjust() {
+    if (!nav || !blogSidebar) return;
+
+    const navRect = nav.getBoundingClientRect();
+    const blogRect = blogSidebar.getBoundingClientRect();
+
+    const isOverlapping =
+      navRect.bottom > blogRect.top && navRect.top < blogRect.bottom;
+
+    if (isOverlapping) {
+      blogSidebar.classList.add("nav-visible");
+    } else {
+      blogSidebar.classList.remove("nav-visible");
+    }
   }
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+    const delta = currentScrollY - lastScrollY;
+
+    if (delta < 0) {
+      scrollUpBuffer -= delta;
+      if (scrollUpBuffer >= threshold) {
+        nav.classList.remove("nav-hidden");
+        checkOverlapAndAdjust();
+        scrollUpBuffer = 0;
+      }
+    } else {
+      nav.classList.add("nav-hidden");
+      blogSidebar?.classList.remove("nav-visible");
+      scrollUpBuffer = 0;
+    }
+
+    lastScrollY = currentScrollY;
+  });
 
   // Scroll-to-top logic
   const btn = document.getElementById("top");

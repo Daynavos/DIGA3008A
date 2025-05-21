@@ -19,13 +19,13 @@ h1 {
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   color: transparent;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
 }
 
 header {
   padding-inline: 8rem;
-  margin: 0px;
+  margin-top: 3rem;
 }
 
 header p {
@@ -70,7 +70,7 @@ h2 {
 }
 
 nav {
-  backdrop-filter: blur(7px);
+  background-color: #f5f5f7;
   border-bottom: solid;
   border-color: rgba(56, 56, 107, 0.7);
   display: flex;
