@@ -48,7 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const filter = btn.getAttribute("data-filter");
 
       blogPosts.forEach((post) => {
-        const tags = post.getAttribute("data-tags").split(" ");
+        const tagsAttr = post.getAttribute("data-tags") || "";
+        const tags = tagsAttr.split(" ");
         const match = filter === "all" || tags.includes(filter);
         post.style.display = match ? "block" : "none";
       });

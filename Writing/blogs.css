@@ -27,6 +27,7 @@ h2 {
   transition: top 0.3s ease;
   max-height: calc(100vh - 7.8rem);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .blogSelection.nav-visible {
@@ -34,7 +35,7 @@ h2 {
 }
 
 .blogSelection::-webkit-scrollbar {
-  width: 0.2rem;
+  width: 0.5rem;
 }
 
 .blogSelection::-webkit-scrollbar-thumb {
