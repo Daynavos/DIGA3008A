@@ -39,4 +39,23 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   observer.observe(trigger);
+
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const blogPosts = document.querySelectorAll(".blog-post");
+
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = btn.getAttribute("data-filter");
+
+      blogPosts.forEach((post) => {
+        const tags = post.getAttribute("data-tags").split(" ");
+        const match = filter === "all" || tags.includes(filter);
+        post.style.display = match ? "block" : "none";
+      });
+
+      // Optional: Highlight active button
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+    });
+  });
 });
