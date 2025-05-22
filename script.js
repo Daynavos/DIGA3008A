@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (hamburger && navMenu) {
     hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
     });
   }
@@ -39,12 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollUpBuffer -= delta;
       if (scrollUpBuffer >= threshold) {
         nav.classList.remove("nav-hidden");
+
         checkOverlapAndAdjust();
         scrollUpBuffer = 0;
       }
     } else {
       nav.classList.add("nav-hidden");
       blogSidebar?.classList.remove("nav-visible");
+      navMenu.classList.remove("active");
       scrollUpBuffer = 0;
     }
 

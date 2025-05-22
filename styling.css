@@ -1,3 +1,32 @@
+:root {
+  --light-grey: rgb(243, 243, 243);
+  --border-width: 3px;
+  --grainy-gradient: radial-gradient(
+      circle at 40% 50%,
+      rgba(56, 56, 107, 1),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+
+  --black-gradient: linear-gradient(
+    90deg,
+    transparent,
+    black 7.5%,
+    transparent
+  );
+
+  --fs-title-med: 4rem;
+  --fs-subheading-med: 1.2rem;
+  --fs-normal-med: 0.85rem;
+
+  --fs-title-small: 3rem;
+  --fs-subheading-small: 1rem;
+  --fs-normal-small: 0.75rem;
+
+  --padding-med: 0.7rem;
+  --padding-small: 0.5rem;
+}
+
 html {
   font-family: "Satoshi", sans-serif;
   scroll-behavior: smooth;
@@ -6,67 +35,46 @@ html {
 
 main {
   padding-inline: 8rem;
-}
-
-h1 {
-  font-family: "Mauline", sans-serif;
-  font-size: 9rem;
-  background-image: radial-gradient(
-      circle at 45% 50%,
-      rgba(56, 56, 107, 1),
-      rgba(129, 25, 25, 0)
-    ),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  background-clip: text;
-  color: transparent;
-  margin-top: 0.3rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
 }
 
 header {
   padding-inline: 8rem;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
-header p {
+h1 {
   font-family: "Mauline", sans-serif;
-  font-size: 3rem;
-  padding-left: 1rem;
-  background-image: radial-gradient(
-      circle at 40% 50%,
-      rgba(56, 56, 107, 1),
-      rgba(129, 25, 25, 0)
-    ),
-    url(https://grainy-gradients.vercel.app/noise.svg);
+  font-size: 5rem;
+  background-image: var(--grainy-gradient);
   background-clip: text;
   color: transparent;
-  margin: 0px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.tagline {
+  font-family: "Mauline", sans-serif;
+  font-size: 3rem;
+  background-image: var(--grainy-gradient);
+  background-clip: text;
+  color: transparent;
+  margin: 0%;
 }
 
 h2 {
   font-family: "Mauline", sans-serif;
-  font-size: 3rem;
-  background-image: radial-gradient(
-      circle at 40% 50%,
-      rgba(56, 56, 107, 1),
-      rgba(129, 25, 25, 0)
-    ),
-    url(https://grainy-gradients.vercel.app/noise.svg);
+  font-size: 2rem;
+  background-image: var(--grainy-gradient);
   background-clip: text;
   color: transparent;
 }
 
-.hamburger {
-  display: none;
-}
-
-.bar {
-  display: block;
-  width: 30px;
-  height: 5px;
-  margin: 8px auto;
-  background-color: black;
-  border-radius: 10px;
+.logo {
+  padding-left: 1%;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 nav {
@@ -75,6 +83,7 @@ nav {
   border-color: rgba(56, 56, 107, 0.7);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 98%;
@@ -86,17 +95,42 @@ nav.nav-hidden {
   transform: translateY(-100%);
   transition: transform 0.3s ease;
 }
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 5px;
+  margin: 8px auto;
+  background-color: black;
+  border-radius: 10px;
+  transition: all 0.1s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(0.2rem);
+  transform-origin: left center;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-0.2rem);
+  transform-origin: left center;
+}
 
 .navMenu {
   display: flex;
-  gap: 2rem;
-  align-items: center;
+  gap: 0.5rem;
   list-style: none;
-  margin-bottom: 2rem;
 }
 
 .navMenu li a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: black;
   text-decoration: none;
   font-weight: bold;
@@ -113,7 +147,6 @@ a.active {
     rgba(56, 56, 107, 1);
   color: white;
   padding: 10px 20px;
-
   border-radius: 50px;
 }
 
@@ -123,54 +156,22 @@ nav a:hover {
   border-radius: 50px;
 }
 
-main {
-  margin-bottom: 1rem;
-}
-
-body {
-  margin: 1%;
-}
-
-.logo {
-  margin-top: 1rem;
-  padding-left: 1%;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-footer {
-  border-top: solid;
-  border-color: rgba(56, 56, 107, 1);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: bolder;
-}
-
 #top {
   display: inline-block;
   background-color: black;
-  width: 50px;
-  height: 50px;
+  width: 2rem;
+  height: 2rem;
   text-align: center;
   border-radius: 4px;
   position: fixed;
-  bottom: 1rem;
+  bottom: 6rem;
   right: 1rem;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
 }
-#top::after {
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
-}
+
 #top:hover {
   cursor: pointer;
   background-color: #333;
@@ -181,6 +182,36 @@ footer {
 #top.show {
   opacity: 1;
   visibility: visible;
+}
+
+#top img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: invert(1);
+}
+
+footer {
+  border-top: solid;
+  border-color: rgba(56, 56, 107, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bolder;
+  padding-inline: 1rem;
+}
+
+.email {
+  padding: 0%;
+  margin: 0%;
+}
+
+#mailIcon {
+  display: flex;
+  object-fit: contain;
+  height: 3rem;
 }
 
 @media (max-width: 700px) {
@@ -224,6 +255,12 @@ footer {
     transition: 0.1s;
   }
 
+  .navMenu.active {
+    top: 30px;
+    justify-items: center;
+    padding: 0%;
+  }
+
   .navMenu li {
     margin: 10px;
   }
@@ -232,22 +269,31 @@ footer {
     width: 100%;
   }
 
-  .navMenu.active {
-    top: 30px;
-  }
-
   main {
     padding-inline: 2rem;
   }
 
   #top {
-    right: 50%;
+    right: -25px;
+    bottom: 1.5rem;
+    width: 2rem;
+    height: 4rem;
+    border-radius: 50px 0 0 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #top img {
+    width: 1rem;
+    height: 1rem;
   }
 }
 
 @media (max-width: 450px) {
   .logo {
-    display: none;
+    font-size: 1rem;
   }
 
   h1 {
@@ -268,25 +314,29 @@ footer {
 
   .hamburger {
     display: block;
+    margin-right: 1rem;
   }
 
   .navMenu {
     position: fixed;
-    left: -100%;
-    top: 70px;
-    width: 100%;
-    height: 100vh;
-    background: lightgrey;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    top: -500%;
+    gap: 0;
     flex-direction: column;
-    align-items: center;
-    transition: left 0.3s ease;
+    background-color: #f5f5f7;
+    width: 100%;
+    text-align: center;
+    transition: 0.1s;
   }
 
   .navMenu.active {
-    left: 0;
+    top: 30px;
+  }
+
+  .navMenu li {
+    margin: 10px;
+  }
+
+  .navMenu li a {
+    width: 100%;
   }
 }

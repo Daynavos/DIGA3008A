@@ -1,6 +1,4 @@
 :root {
-  --pink: #ecb2ba;
-  --pink-dark: #c6939a;
   --tape-gray: #dbd8be;
   --tape-edge-gray: #b7b49d;
   --transparent: rgba(56, 56, 107, 0);
@@ -9,62 +7,19 @@
 .HomeTitle {
   display: flex;
   flex-direction: column;
-  /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8ea', endColorstr='#efefef',GradientType=0 ); */
-  padding-inline: 8rem;
-  /* background: linear-gradient(to bottom, #e8e8ea 0%, #efefef 100%); */
-
-  /* margin-inline: 4%;
-
-  border-left: 2px solid #f5f5f7;
-  border-bottom: 2px solid #f5f5f7;
-  border-right: 1px solid #adc0bc;
-  border-top: 1px solid #f4f4f6; */
-
-  /* box-shadow: 0 0 2px 0 #f4f4f6 inset, -1em 1em 3em 1em rgba(56, 56, 107, 0.2),
-    -5em 1em 30em 1em rgba(85, 85, 105, 0.2), 0em 2px 0 rgba(92, 92, 101, 0.7),
-    1.2em -0.8em 2em 0em #3e467a, 5.5em -1em 50em 0em #5f5f6e,
-    0px -5px 25px 0px #80888f;
-
-  backface-visibility: hidden;*/
-}
-
-.tagline {
-  font-family: "Mauline", sans-serif;
-  font-size: 3rem;
-  padding-left: 1%;
-  background-image: radial-gradient(
-      circle at 70% 50%,
-      rgba(56, 56, 107, 1),
-      rgba(129, 25, 25, 0)
-    ),
-    url(https://grainy-gradients.vercel.app/noise.svg);
-  background-clip: text;
-  color: transparent;
-}
-
-.HomeTitle {
   padding-inline: 8rem;
   margin-top: 3rem;
 }
 
 .mainTitle {
-  font-size: 9rem;
-  background-image: radial-gradient(
-      circle at var(--x, 90%) var(--y, 50%),
-      rgba(56, 56, 107, 1),
-      rgba(129, 25, 25, 0)
-    ),
-    url(https://grainy-gradients.vercel.app/noise.svg);
+  font-size: 6rem;
+  background-image: var(--grainy-gradient);
   background-clip: text;
   color: transparent;
   text-shadow: 2px 5px 10px rgba(32, 31, 31, 0.2);
   transition: --x 0.3s ease, --y 0.3s ease;
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-p {
-  font-size: 1rem;
 }
 
 .profile {
