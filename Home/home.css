@@ -26,16 +26,53 @@
   margin-bottom: 1%;
 }
 
-.games {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+.gameCarouselWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.gameCarousel {
+  display: flex;
   gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+}
+.gameCarousel::-webkit-scrollbar {
+  display: none; /* Chrome */
 }
 
 .gameEntry {
-  display: grid;
-  padding: 4%;
-  box-shadow: 1px 3px 5px #3c3d69;
+  flex: 0 0 calc(33.333% - 1rem); /* Show 3 entries at a time */
+  background: #f0f0f0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.carouselBtn.left {
+  left: 0;
+}
+
+.carouselBtn.right {
+  right: 0;
 }
 
 .gameImage {
@@ -48,7 +85,6 @@
 .blogs {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 0.7fr));
-
   justify-content: center;
   gap: 2rem;
   margin-top: 1%;
@@ -85,7 +121,7 @@
   bottom: 10px;
   width: 40%;
   height: 10px;
-  box-shadow: 0 7.5px 16px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 25px rgba(1, 1, 1, 1);
   z-index: -1;
   transition: all 0.3s ease-in-out;
 }
@@ -102,7 +138,7 @@
 
 .blogEntry:hover::before,
 .blogEntry:hover::after {
-  box-shadow: 0 5px 17px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
 
 .blogEntry:hover::before {

@@ -28,4 +28,18 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     console.warn("mainTitle element not found");
   }
+
+  const carousel = document.querySelector(".gameCarousel");
+  const btnLeft = document.querySelector(".carouselBtn.left");
+  const btnRight = document.querySelector(".carouselBtn.right");
+
+  const scrollAmount = carousel.offsetWidth; // scroll by 1 full view
+
+  btnLeft.addEventListener("click", () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  btnRight.addEventListener("click", () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
 });
