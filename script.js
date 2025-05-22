@@ -10,59 +10,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Elements for nav and sidebar
   const nav = document.querySelector("nav");
   const blogSidebar = document.querySelector(".blogSelection");
+  const btn = document.getElementById("top");
+
+  // Scroll state tracking
   let lastScrollY = window.scrollY;
   let scrollUpBuffer = 0;
   const threshold = 10;
 
-  function checkOverlapAndAdjust() {
-    if (!nav || !blogSidebar) return;
-
-    const navRect = nav.getBoundingClientRect();
-    const blogRect = blogSidebar.getBoundingClientRect();
-
-    const isOverlapping =
-      navRect.bottom > blogRect.top && navRect.top < blogRect.bottom;
-
-    if (isOverlapping) {
-      blogSidebar.classList.add("nav-visible");
-    } else {
-      blogSidebar.classList.remove("nav-visible");
-    }
-  }
-
+  // Unified scroll handler
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;
     const delta = currentScrollY - lastScrollY;
 
+    // Show/hide nav
     if (delta < 0) {
       scrollUpBuffer -= delta;
       if (scrollUpBuffer >= threshold) {
-        nav.classList.remove("nav-hidden");
-
+        nav?.classList.remove("nav-hidden");
         checkOverlapAndAdjust();
         scrollUpBuffer = 0;
       }
     } else {
-      nav.classList.add("nav-hidden");
+      nav?.classList.add("nav-hidden");
       blogSidebar?.classList.remove("nav-visible");
-      navMenu.classList.remove("active");
+      navMenu?.classList.remove("active");
       scrollUpBuffer = 0;
+    }
+
+    // Show/hide top button
+    if (btn) {
+      btn.classList.toggle("show", window.scrollY > 300);
     }
 
     lastScrollY = currentScrollY;
   });
 
-  // Scroll-to-top logic
-  const btn = document.getElementById("top");
-
-  window.addEventListener("scroll", () => {
-    btn.classList.toggle("show", window.scrollY > 300);
-  });
-
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  // Scroll-to-top button logic
+  if (btn) {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
