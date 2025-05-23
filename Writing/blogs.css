@@ -30,7 +30,7 @@ h2 {
   top: 1rem;
   margin-left: 8rem;
   transition: top 0.3s ease;
-  max-height: calc(100vh - 7.8rem);
+  max-height: calc(100vh - 10rem);
   overflow-y: auto;
   overflow-x: hidden;
 }
