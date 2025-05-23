@@ -16,10 +16,29 @@
   font-size: 1.2rem;
   font-weight: bold;
   padding-inline: 0%;
+  background-image: radial-gradient(
+      circle at 40% 50%,
+      rgba(56, 56, 107, 1),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
 .gameLink:hover {
-  color: rgba(56, 56, 107, 1);
+  background-image: radial-gradient(
+      circle at 40% 50%,
+      rgba(56, 56, 107, 1),
+      rgba(56, 56, 107, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+  transform: scale(1.05); /* optional: a subtle grow effect */
 }
 
 .gameInfo {

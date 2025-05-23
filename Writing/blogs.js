@@ -59,4 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.add("active");
     });
   });
+
+  const toggle = document.querySelector(".dropdownToggle");
+  const list = document.querySelector(".dropdownList");
+
+  toggle?.addEventListener("click", () => {
+    list?.classList.toggle("show");
+  });
 });
