@@ -159,6 +159,15 @@ img {
   display: block;
 }
 
+@media (min-width: 851px) {
+  .dropdownList {
+    display: block !important;
+  }
+  .dropdownToggle {
+    display: none;
+  }
+}
+
 @media (max-width: 850px) {
   main {
     margin-top: 0.5%;
