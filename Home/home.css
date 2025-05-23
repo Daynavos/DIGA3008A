@@ -191,6 +191,18 @@
   right: 5px;
 }
 
+@media (max-width: 1200px) {
+  .gameEntry {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 920px) {
+  .gameImage {
+    max-width: 230px;
+  }
+}
+
 @media (max-width: 800px) {
   .mainTitle {
     font-size: var(--fs-title-med);
@@ -221,6 +233,10 @@
     width: 100%; /* fill musicPlayer container */
     height: auto;
   }
+
+  .gameImage {
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -236,5 +252,13 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .gameEntry {
+    flex: 0 0 100%;
+  }
+
+  .gameImage {
+    max-width: 180px;
   }
 }

@@ -218,7 +218,7 @@ nav a:hover {
   height: 100%;
   object-fit: contain;
   display: block;
-  /* filter: invert(1); */
+  filter: invert(1);
 }
 
 a {

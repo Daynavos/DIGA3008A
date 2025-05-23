@@ -1,45 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script loaded");
-
-  const title = document.querySelector(".mainTitle");
-  console.log("Title element:", title);
-
-  if (title) {
-    const defaultX = "90%";
-    const defaultY = "50%";
-
-    title.addEventListener("mouseenter", () => {
-      title.addEventListener("mousemove", updatePosition);
-    });
-
-    title.addEventListener("mouseleave", () => {
-      title.removeEventListener("mousemove", updatePosition);
-      title.style.setProperty("--x", defaultX);
-      title.style.setProperty("--y", defaultY);
-    });
-
-    function updatePosition(e) {
-      const rect = title.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      title.style.setProperty("--x", `${x}%`);
-      title.style.setProperty("--y", `${y}%`);
-    }
-  } else {
-    console.warn("mainTitle element not found");
-  }
-
   const carousel = document.querySelector(".gameCarousel");
   const btnLeft = document.querySelector(".carouselBtn.left");
   const btnRight = document.querySelector(".carouselBtn.right");
 
-  const scrollAmount = carousel.offsetWidth; // scroll by 1 full view
+  // Helper: calculate scroll amount dynamically
+  function getScrollAmount() {
+    // Option 1: Scroll by the width of one item + gap
+    const firstItem = carousel.querySelector(".gameEntry");
+    if (!firstItem) return carousel.offsetWidth; // fallback
+
+    const style = getComputedStyle(carousel);
+    const gap = parseInt(style.gap) || 0;
+
+    return firstItem.offsetWidth + gap;
+  }
 
   btnLeft.addEventListener("click", () => {
+    const scrollAmount = getScrollAmount();
     carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
   });
 
   btnRight.addEventListener("click", () => {
+    const scrollAmount = getScrollAmount();
     carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+
+  // Optional: update scrollAmount on window resize (if you want to cache)
+  window.addEventListener("resize", () => {
+    // If caching scrollAmount in a variable, update it here
   });
 });
