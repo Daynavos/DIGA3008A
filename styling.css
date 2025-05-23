@@ -16,11 +16,11 @@
   );
 
   --fs-title-med: 4rem;
-  --fs-subheading-med: 1.2rem;
+  --fs-subheading-med: 1.8rem;
   --fs-normal-med: 0.85rem;
 
   --fs-title-small: 3rem;
-  --fs-subheading-small: 1rem;
+  --fs-subheading-small: 1.3rem;
   --fs-normal-small: 0.75rem;
 
   --padding-med: 0.7rem;
@@ -42,6 +42,15 @@ main {
 header {
   padding-inline: 8rem;
   margin-top: 5rem;
+  font-weight: bolder;
+}
+
+header p {
+  font-size: 1.5rem;
+  background-image: var(--grainy-gradient);
+  background-clip: text;
+  color: transparent;
+  font-weight: bolder;
 }
 
 h1 {
@@ -53,15 +62,6 @@ h1 {
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
   padding-bottom: 0.3rem;
-}
-
-.tagline {
-  font-family: "Mauline", sans-serif;
-  font-size: 3rem;
-  background-image: var(--grainy-gradient);
-  background-clip: text;
-  color: transparent;
-  margin: 0%;
 }
 
 h2 {
@@ -197,7 +197,8 @@ nav a:hover {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 9999 !important;
+  background-color: red !important;
 }
 
 #top:hover {
@@ -212,17 +213,17 @@ nav a:hover {
   visibility: visible;
 }
 
-a {
-  background-image: var(--grainy-gradient);
-  background-clip: text;
-}
-
 #top img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
   filter: invert(1);
+}
+
+a {
+  background-image: var(--grainy-gradient);
+  background-clip: text;
 }
 
 footer {
@@ -264,13 +265,17 @@ footer {
     font-size: var(--fs-normal-med);
   }
 
+  li {
+    font-size: var(--fs-normal-med);
+  }
+
   header {
     padding-inline: 2.5rem;
     margin-top: 5rem;
   }
 
   header p {
-    font-size: 2.1em;
+    font-size: 1.2rem;
   }
 
   footer {
@@ -301,7 +306,6 @@ footer {
   .navMenu li {
     margin: 10px;
   }
-
   .navMenu li a {
     width: 100%;
   }
@@ -311,7 +315,7 @@ footer {
   }
 
   #top {
-    right: -25px;
+    right: 1rem;
     bottom: 1.5rem;
     width: 2rem;
     height: 100px;
@@ -333,6 +337,10 @@ footer {
     padding-inline: 0.5rem;
     padding-bottom: 0.1rem;
   }
+
+  a {
+    font-size: var(--fs-normal-small);
+  }
 }
 
 @media (max-width: 450px) {
@@ -341,15 +349,19 @@ footer {
   }
 
   h1 {
-    font-size: var(--fs-title-med);
+    font-size: var(--fs-title-small);
   }
 
   h2 {
-    font-size: 1.9rem;
+    font-size: var(--fs-subheading-small);
+  }
+
+  a {
+    font-size: var(--fs-normal-small);
   }
 
   header p {
-    font-size: 1.5em;
+    font-size: 1rem;
   }
 
   footer {
@@ -389,5 +401,9 @@ footer {
     border-radius: 50px;
     padding-inline: 0.5rem;
     padding-bottom: 0.1rem;
+  }
+
+  li {
+    font-size: var(--fs-normal-small);
   }
 }

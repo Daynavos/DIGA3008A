@@ -1,6 +1,6 @@
 h2 {
   font-family: "Mauline", sans-serif;
-  font-size: 3rem;
+  font-size: 2.2em;
   background-image: radial-gradient(
       circle at 35% 50%,
       rgb(49, 49, 94),
@@ -9,6 +9,11 @@ h2 {
     url(https://grainy-gradients.vercel.app/noise.svg);
   background-clip: text;
   color: transparent;
+}
+
+.p-summary {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .blogSelection {
@@ -108,10 +113,6 @@ details summary {
   font-size: 1.2rem;
 }
 
-.p-summary {
-  font-size: 1.3rem;
-}
-
 details summary.shadow {
   position: relative;
   transition: 2000ms ease-in-out;
@@ -150,11 +151,19 @@ img {
 }
 
 /* Default (desktop): show full list, hide dropdown button */
-.dropdownToggle {
+.dropdownList {
   display: none;
 }
 
-@media (max-width: 800px) {
+.dropdownList.show {
+  display: block;
+}
+
+@media (max-width: 850px) {
+  main {
+    margin-top: 0.5%;
+    padding-inline: 2rem;
+  }
   .dropdownToggle {
     display: block;
     width: 100%;
@@ -209,17 +218,8 @@ img {
   }
 }
 
-.p-name {
-  font-size: 2.2rem;
-}
-
 .e-content {
   margin-inline: 1rem;
-  font-size: 1rem;
-}
-
-.p-summary {
-  font-size: 1.1rem;
 }
 
 img {
@@ -234,7 +234,7 @@ img {
     margin-inline: 1%;
   }
 
-  .blogSelection ul {
+  .blogSelection > ul:not(.dropdownList) {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -242,13 +242,17 @@ img {
     list-style: none;
   }
 
+  /* Keep your dropdown toggle styles as before */
+  .dropdownList {
+    display: none;
+  }
+  .dropdownList.show {
+    display: block;
+  }
+
   .blogSelection ul li {
     margin: 0;
     font-weight: bold;
-  }
-
-  .p-name {
-    font-size: 1.9rem;
   }
 
   .e-content {

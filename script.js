@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Elements for nav and sidebar
   const nav = document.querySelector("nav");
   const blogSidebar = document.querySelector(".blogSelection");
-  const btn = document.getElementById("top");
 
   // Scroll state tracking
   let lastScrollY = window.scrollY;
@@ -49,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Scroll-to-top button logic
+  const btn = document.getElementById("top");
   if (btn) {
     btn.addEventListener("click", (e) => {
       e.preventDefault();

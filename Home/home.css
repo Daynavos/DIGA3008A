@@ -191,7 +191,7 @@
   right: 5px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .mainTitle {
     font-size: var(--fs-title-med);
   }

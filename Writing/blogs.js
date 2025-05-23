@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggle = document.querySelector(".dropdownToggle");
   const list = document.querySelector(".dropdownList");
 
-  toggle?.addEventListener("click", () => {
-    list?.classList.toggle("show");
+  toggle.addEventListener("click", () => {
+    list.classList.toggle("show");
   });
 });

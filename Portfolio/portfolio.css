@@ -59,7 +59,7 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .gameEntry {
     flex-direction: column;
     gap: 1rem;
