@@ -38,7 +38,7 @@
         <span class="bar"></span>
       </div>
 
-      <ul class="navMenu" role="menu">
+      <ul class="navMenu" aria-label="Main Navigation">
         <li role="menuitem"><a href="index.html" class="active">HOME</a></li>
         <li role="menuitem">
           <a href="Portfolio/portfolio.html">PORTFOLIO</a>
@@ -55,46 +55,54 @@
       <p class="tagline">Game Designer & Engineering Student</p>
     </header>
 
-    <main class="projects">
+    <main id="main-content" class="projects">
       <h2>About Me</h2>
-      <div class="profile">
+      <div class="profile h-card">
         <div class="aboutMeText">
-          <p>Hi, I'm Dayna</p>
+          <p class="p-name">Hi, I'm <span class="p-name">Dayna Vos</span></p>
           <p>
-            I'm based in Johannesburg, South Africa, and currently a third-year
-            BEngSc Digital Arts student at Wits University. That means I spend
-            my days making games, and my nights wrangling multivariable calculus
-            (or sometimes the other way around). I love making things; games,
-            songs, drawings, stories, even the occasional piece of woodworking.
-            Creation is at the core of who I am. This site is a collection of
-            some of the things I’ve made. Feel free to explore and listen to a
-            few songs I’ve written as a soundtrack to the journey.
+            I'm based in <span class="p-locality">Johannesburg</span>,
+            <span class="p-country-name">South Africa</span>, and currently a
+            <span class="p-note">
+              third-year BEngSc Digital Arts student at Wits University That
+              means I spend my days making games, and my nights wrangling
+              multivariable calculus (or sometimes the other way around). I love
+              making things; games, songs, drawings, stories, even the
+              occasional piece of woodworking. Creation is at the core of who I
+              am. This site is a collection of some of the things I’ve made.
+              Feel free to explore and listen to a few songs I’ve written as a
+              soundtrack to the journey.
+            </span>
           </p>
         </div>
         <div class="musicPlayer">
           <img
             src="Home/Images/music.png"
-            class="musicImage"
+            class="musicImage u-photo"
             alt="album cover for my music"
           />
           <a
             href="https://open.spotify.com/album/3SfJF3HyuOZW96Ke76eFRk"
+            class="u-url"
+            rel="me"
             target="_blank"
-            class="playButton"
             title="Listen on Spotify"
           >
             &#9658;
           </a>
         </div>
       </div>
+
       <!--GAME CARDS-->
 
       <h2>Games</h2>
 
-      <div class="gameCarouselWrapper">
-        <button class="carouselBtn left">&#10094;</button>
-        <div class="gameCarousel">
-          <div class="gameEntry">
+      <div class="gameCarouselWrapper" role="region" aria-label="Game carousel">
+        <button class="carouselBtn left" aria-label="Scroll left">
+          &#10094;
+        </button>
+        <div class="gameCarousel" role="list">
+          <div class="gameEntry" role="listitem">
             <h3>19 Blaine Avenue</h3>
             <a href="Portfolio/portfolio.html">
               <img
@@ -185,88 +193,90 @@
             <p>Basic Air Hockey Game</p>
           </div>
         </div>
-        <button class="carouselBtn right">&#10095;</button>
+        <button class="carouselBtn right" aria-label="Scroll right">
+          &#10095;
+        </button>
       </div>
 
       <!--BLOG CARDS-->
       <h2>Blogs</h2>
       <div class="blogs">
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 1</h3>
-            <time class="dt-published" datetime="2025-02-17">
-              17 February 2025
-            </time>
-            <p class="p-summary">GitHub and Goals for the Course</p>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 1</h3>
+            <p class="p-summary">GitHub and my Goals for the Course</p>
+            <time class="dt-published" datetime="2025-02-17"
+              >17 February 2025</time
+            >
           </a>
         </div>
 
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 2</h3>
-            <time class="dt-published" datetime="2025-02-24">
-              24 February 2025
-            </time>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 2</h3>
             <p class="p-summary">
               Reflection on Moulthrop's Hypertext and the Laws of Media
             </p>
+            <time class="dt-published" datetime="2025-02-24">
+              24 February 2025
+            </time>
           </a>
         </div>
 
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 3</h3>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 3</h3>
+            <p class="p-summary">User Alignment and Mapping Out My Site</p>
             <time class="dt-published" datetime="2025-03-03">
               3 March 2025
             </time>
-            <p class="p-summary">User Alignment and Mapping Out My Site</p>
           </a>
         </div>
 
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 4</h3>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 4</h3>
+            <p class="p-summary">IxD Process</p>
             <time class="dt-published" datetime="2025-03-10">
               10 March 2025
             </time>
-            <p class="p-summary">IxD Process</p>
           </a>
         </div>
 
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 5</h3>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 5</h3>
+            <p class="p-summary">Design Section A</p>
             <time class="dt-published" datetime="2025-03-17">
               17 March 2025
             </time>
-            <p class="p-summary">Design Section A</p>
           </a>
         </div>
 
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 6</h3>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 5</h3>
+            <p class="p-summary">Design Section B</p>
             <time class="dt-published" datetime="2025-03-24">
               24 March 2025
             </time>
-            <p class="p-summary">Design Section B</p>
           </a>
         </div>
 
-        <div class="blogEntry">
+        <div class="blogEntry h-entry">
           <div class="top-tape"></div>
-          <a href="Writing/blogs.html">
-            <h3>Blog 7</h3>
+          <a class="u-url" href="Writing/blogs.html">
+            <h3 class="p-name">Blog 5</h3>
+            <p class="p-summary">Research for Essay One</p>
             <time class="dt-published" datetime="2025-03-31">
               31 March 2025
             </time>
-            <p class="p-summary">Essay One Research</p>
           </a>
         </div>
       </div>

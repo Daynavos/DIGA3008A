@@ -98,6 +98,9 @@ button {
   font-weight: bold;
 } */
 
+time {
+  font-style: italic;
+}
 button:hover {
   background-color: rgba(0, 0, 0, 0.2);
 }
