@@ -150,7 +150,6 @@ img {
   max-width: 500px;
 }
 
-/* Default (desktop): show full list, hide dropdown button */
 .dropdownList {
   display: none;
 }
@@ -172,6 +171,11 @@ img {
   main {
     margin-top: 0.5%;
     padding-inline: 2rem;
+  }
+
+  .blogSelection {
+    display: flex;
+    margin-right: 5rem;
   }
   .dropdownToggle {
     display: block;
