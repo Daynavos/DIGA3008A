@@ -4,6 +4,10 @@
   --transparent: rgba(56, 56, 107, 0);
 }
 
+a {
+  padding: 1rem;
+}
+
 .HomeTitle {
   display: flex;
   flex-direction: column;
@@ -154,6 +158,18 @@
   border-radius: 2px;
   display: grid;
   padding: 4%;
+}
+
+.blogEntry :hover {
+  p {
+    text-decoration: none;
+  }
+  time {
+    text-decoration: none;
+  }
+  h3 {
+    text-decoration: underline;
+  }
 }
 
 .blogEntry::before,

@@ -8,12 +8,12 @@
     ),
     url(https://grainy-gradients.vercel.app/noise.svg);
 
-  --black-gradient: linear-gradient(
-    90deg,
-    transparent,
-    black 7.5%,
-    transparent
-  );
+  --black-gradient: radial-gradient(
+      circle at 40% 50%,
+      rgb(38, 38, 45),
+      rgba(129, 25, 25, 0)
+    ),
+    url(https://grainy-gradients.vercel.app/noise.svg);
 
   --fs-title-med: 4rem;
   --fs-subheading-med: 1.8rem;
@@ -93,6 +93,7 @@ button {
 
 button:hover {
   background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 time {
@@ -355,7 +356,7 @@ footer {
     padding-bottom: 0.1rem;
   }
 
-  a {
+  button a {
     font-size: var(--fs-normal-small);
   }
 }

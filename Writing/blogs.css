@@ -68,6 +68,10 @@ h2 {
   display: block;
 }
 
+.filter-btn.active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 .content {
   display: grid;
   gap: 1rem;
@@ -111,6 +115,15 @@ details summary {
 .e-content {
   margin-inline: 2rem;
   font-size: 1.2rem;
+}
+
+.p-name {
+  background: url(https://grainy-gradients.vercel.app/noise.svg), black;
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 details summary.shadow {
@@ -180,11 +193,10 @@ img {
   .dropdownToggle {
     display: block;
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.7rem;
     font-size: 1rem;
     font-weight: bold;
-    border: 1px solid rgba(56, 56, 107, 1);
-    border-radius: 5px;
+    border: 1px solid rgba(56, 56, 107, 0);
     background-color: white;
     cursor: pointer;
   }
@@ -227,7 +239,7 @@ img {
   .blogSelection {
     position: static;
     width: 100%;
-    margin: 1rem auto;
+    margin: 1rem auto 1rem auto;
   }
 }
 
@@ -244,7 +256,7 @@ img {
     display: flex;
     float: none;
     width: auto;
-    margin-inline: 1%;
+    margin-right: 5%;
   }
 
   .blogSelection > ul:not(.dropdownList) {
@@ -264,7 +276,7 @@ img {
   }
 
   .blogSelection ul li {
-    margin: 0;
+    margin-right: 2rem;
     font-weight: bold;
   }
 
