@@ -14,9 +14,12 @@
     />
 
     <link rel="stylesheet" href="Home/home.css" />
-    <link rel="stylesheet" href="Styles/styling.css" />
+    <link rel="stylesheet" href="Styles/main.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.cdnfonts.com/css/mauline" rel="stylesheet" />
-    <script src="Scripts/script.js"></script>
+    <script src="Scripts/main.js" defer></script>
+
+    <script src="script.js"></script>
     <script src="Home/home.js"></script>
 
     <title>Dayna Vos Portfolio Website</title>
@@ -90,6 +93,12 @@
           >
             &#9658;
           </a>
+        </div>
+        <div id="player-container">
+          <h2 id="title">Loading...</h2>
+          <h3 id="artist"></h3>
+          <audio id="player" controls></audio>
+          <button onclick="getRandomTrack()">🔀 New Random Song</button>
         </div>
       </div>
 
