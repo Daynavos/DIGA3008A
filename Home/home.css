@@ -37,45 +37,65 @@ a {
 }
 
 #player-container {
-  background: #818181;
+  display: flex;
   padding: 2em;
   border-radius: 1em;
   box-shadow: 0 0 20px #0008;
-  max-width: 400px;
-  margin: auto;
+  margin-top: 1.2rem;
+
+  /* justify-content: space-between; */
+  align-items: center;
+  justify-items: center;
+}
+
+.song_info {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 #indieButton {
-  background: #00adb5;
+  background: url(https://grainy-gradients.vercel.app/noise.svg),
+    rgba(56, 56, 107, 1);
   border: none;
   padding: 0.8em 1.5em;
-  color: white;
+  color: black;
   font-size: 1em;
+  font-weight: bolder;
   margin-top: 1em;
   border-radius: 0.5em;
   cursor: pointer;
 }
 
 #indieButton:hover {
-  background: #008b93;
+  background: url(https://grainy-gradients.vercel.app/noise.svg), black;
+  color: white;
 }
 
-/* .musicPlayer {
+#cover {
+  max-width: 20%;
+  border-radius: 10px;
+  display: block;
+}
+
+.musicPlayer {
   position: relative;
   display: inline-block;
   height: 270px;
-} */
-
-#cover {
-  max-width: 270px;
-  border-radius: 10px;
-  display: block;
 }
 
 .musicImage {
   max-width: 270px;
   border-radius: 10px;
   display: block;
+}
+
+#title {
+  margin: 0%;
+}
+
+#artist {
+  margin: 0%;
 }
 
 .playButton {
