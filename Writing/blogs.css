@@ -119,7 +119,7 @@ details summary {
 
 .p-name {
   background: url(https://grainy-gradients.vercel.app/noise.svg), black;
-  background-size: cover;
+  background-size: 10px 10px;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

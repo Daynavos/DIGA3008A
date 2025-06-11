@@ -73,16 +73,16 @@
               making things; games, songs, drawings, stories, even the
               occasional piece of woodworking. Creation is at the core of who I
               am. This site is a collection of some of the things I’ve made.
-              Feel free to explore and listen to a few songs I’ve written as a
-              soundtrack to the journey.
+              Feel free to explore and if you'd like, you can maybe discover a
+              new indie artist with the random indie song generator.
             </span>
           </p>
         </div>
-        <div class="musicPlayer">
+        <!-- <div class="musicPlayer">
           <img
             src="Home/Images/music.png"
             class="musicImage u-photo"
-            alt="album cover for my music"
+            alt="lbum cover for my music"
           />
           <a
             href="https://open.spotify.com/album/3SfJF3HyuOZW96Ke76eFRk"
@@ -91,14 +91,18 @@
             target="_blank"
             title="Listen on Spotify"
           >
-            &#9658;
           </a>
-        </div>
+          <h2 id="WWP_title">Loading...</h2>
+          <h3 id="WWP_artist">When We Pretend</h3>
+          <audio id="WWPplayer" controls></audio>
+        </div> -->
+
         <div id="player-container">
+          <img id="cover" src="" alt="Album Art" />
           <h2 id="title">Loading...</h2>
           <h3 id="artist"></h3>
           <audio id="player" controls></audio>
-          <button onclick="getRandomTrack()">🔀 New Random Song</button>
+          <button id="indieButton">Random Indie Track</button>
         </div>
       </div>
 
