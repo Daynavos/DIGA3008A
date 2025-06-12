@@ -38,21 +38,43 @@ a {
 
 #player-container {
   display: flex;
-  padding: 2em;
-  border-radius: 1em;
-  margin-top: 1.2rem;
-  border: solid 2px;
-  border-color: gray;
-  border-radius: 10px;
-  /* justify-content: space-between; */
   align-items: center;
-  justify-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1em;
+  border: 2px solid gray;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  background-color: #f9f9f9;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .song_info {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  max-width: 35%;
+}
+
+.title_artist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+#cover {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+#player {
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 #indieButton {
@@ -63,20 +85,14 @@ a {
   color: black;
   font-size: 1em;
   font-weight: bolder;
-  margin-top: 1em;
   border-radius: 0.5em;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 #indieButton:hover {
   background: url(https://grainy-gradients.vercel.app/noise.svg), black;
   color: white;
-}
-
-#cover {
-  max-width: 20%;
-  border-radius: 10px;
-  display: block;
 }
 
 .musicPlayer {
@@ -303,6 +319,26 @@ a {
 
   .gameImage {
     max-width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  #player-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .song_info {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  #player {
+    width: 100%;
+  }
+
+  #indieButton {
+    width: 100%;
   }
 }
 
