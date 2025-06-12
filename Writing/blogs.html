@@ -76,6 +76,9 @@
         <li class="blogThirteen">
           <a href="#Blog13">Blog 13: Ethical Internet</a>
         </li>
+        <li class="blogThirteen">
+          <a href="#reflection">Reflection: My Web Dev Journey</a>
+        </li>
         <li class="EssayOne"><a href="#Essay1">Essay 1: UI, UX & Ethics</a></li>
         <li class="Analysis1">
           <a href="#Analysis1">Analysis 1: Outer Wilds</a>
@@ -1321,6 +1324,136 @@
 
       <article
         class="h-entry blog-post"
+        id="reflection"
+        data-tags="design"
+        role="article"
+        aria-labelledby="reflection-title"
+      >
+        <details
+          class="blogEntry"
+          aria-labelledby="reflection-title"
+          aria-describedby="reflection-summary"
+          aria-expanded="false"
+        >
+          <summary role="button" aria-controls="reflection-content">
+            <h2 class="p-name" id="reflection-title">
+              Reflection: My Web Dev Journey so far.
+              <span class="dropdown-icon" aria-hidden="true">▾</span>
+            </h2>
+            <h4 class="p-summary" id="reflection-summary">
+              Reflecting on my experience learning about Web Development and the
+              experience of making this website.
+            </h4>
+            <time class="dt-published" datetime="2025-06-14">
+              14 June 2025
+            </time>
+          </summary>
+
+          <div
+            class="e-content"
+            id="reflection-content"
+            role="region"
+            aria-label="reflection full content"
+          >
+            <h3>Web Development Journey – Reflection</h3>
+            <p>
+              Throughout this project, I’ve developed a deeper understanding of
+              how to structure and build a modular, accessible, and responsive
+              website. Reflecting on each layer of development has given me
+              insight into my current workflow and areas for future improvement.
+            </p>
+            <h3>Folder Structure</h3>
+            <p>
+              My folder structure is intentionally simple and grouped according
+              to individual pages. Each page lives in its own folder alongside
+              its related HTML, CSS, and JavaScript files. Shared resources like
+              the global CSS and JS files are kept in separate, clearly labeled
+              folders. I’ve maintained consistent naming conventions—Capitalized
+              for folders, lowercase for files—which improves readability and
+              helps enforce order as the project grows. I tried to avid deeply
+              nested folders. While the structure supports scalability for the
+              most part, I made the deliberate choice to house all blogs and
+              essays in a single HTML file. This was appropriate for the current
+              scope of the site but would pose a limitation if the site needed
+              to scale further. In a future iteration, I would modularize the
+              blog and essay content to improve scalability and enable better
+              content management.
+            </p>
+            <h3>Semantic Markup</h3>
+            <p>
+              I aimed to use semantic HTML elements where possible to provide
+              clarity and structure for both browsers and assistive
+              technologies. Elements such as main, article, section, and nav
+              were used appropriately to convey the role of content blocks.
+              However, there is room for improvement in ensuring all interface
+              elements are fully and correctly marked up—for example, making
+              sure all buttons and links have clear and descriptive text.
+              Semantic markup enhances usability, particularly for screen reader
+              users, and contributes to better SEO. In future versions, I’d like
+              to focus more on semantic labeling of custom interactive elements
+              to improve accessibility and clarity across the board.
+            </p>
+            <h3>Metadata</h3>
+            <p>
+              I’ve included ample metadata to assist the browser in rendering
+              the site correctly and to guide search engines in indexing it.
+              This includes character encoding, viewport settings for
+              responsiveness, and basic descriptions and titles for pages.
+              However, I recognize that my use of ARIA attributes is limited.
+              These attributes could significantly enhance accessibility by
+              providing more context to assistive technologies, particularly in
+              complex or interactive components. I plan to revisit this and
+              incorporate more descriptive metadata where relevant.
+            </p>
+            <h3>CSS</h3>
+            <p>
+              I’m satisfied with the structure and maintainability of my CSS.
+              I’ve avoided inline styles entirely, relying instead on modular
+              stylesheets and reusable classes. The use of relative units like
+              rem and %—instead of fixed px—has allowed for better adaptability
+              across screen sizes and browsers. I’ve employed media queries to
+              accommodate four distinct form factors, and within each, I’ve used
+              flexible layouts such as flexbox to ensure responsiveness.
+              Intentional effort went into making the design fluid and
+              accessible regardless of the device used.
+            </p>
+            <h3>JavaScript</h3>
+            <p>
+              JavaScript plays a central role in enabling interactivity across
+              the site. I’ve avoided inline scripting and instead used event
+              listeners and DOM manipulation to create dynamic user experiences.
+              Initially, I overlooked the importance of removeEventListener, but
+              I’ve since corrected that to manage memory and performance better.
+              I’ve also implemented asynchronous requests when working with
+              APIs, improving the site’s performance and responsiveness. To
+              reduce redundancy, I consolidated repeated functions into a
+              main.js file. This approach keeps the logic layer organized and
+              efficient, and I’m happy with how it has worked out.
+            </p>
+            <h3>Final Thoughts</h3>
+            <p>
+              This journey has helped me establish a solid foundation in web
+              development. I now see how each layer—structure, semantics, style,
+              and interaction—comes together to form a cohesive experience.
+              Moving forward, I’d like to shift my workflow: instead of
+              completing all the HTML, then all the CSS, and then all the JS, I
+              want to approach components more holistically—building each one
+              from structure to styling to behavior in a single flow. This shift
+              will allow for more modular thinking and align with modern web
+              development practices like component-based design. I’m proud of
+              the progress I’ve made and excited to continue learning and
+              refining my approach.
+            </p>
+          </div>
+
+          <button class="close-details-button" aria-label="Close blog post">
+            Close
+          </button>
+        </details>
+      </article>
+
+      <article
+        class="h-entry blog-post"
         id="Essay1"
         data-tags="essays ethics"
         role="article"
@@ -1935,12 +2068,12 @@
             role="region"
             aria-label="Full content for Analysis 3: The Tutorializations of Super Mario Galaxy"
           >
-            <p>
+            <h3>
               <strong
                 >Super Mario Galaxy: Teach It to Me Like I’m an
                 8-Year-Old</strong
               >
-            </p>
+            </h3>
 
             <p>
               <em>Super Mario Galaxy</em> is a masterclass in tutorialization,
